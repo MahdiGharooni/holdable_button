@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:holdable_button/holdable_button.dart';
 
 void main() {
@@ -16,16 +13,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-  final _holdableButtonPlugin = HoldableButton();
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,7 +21,25 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: _holdableButtonPlugin.getPlatformVersion(),
+          child: HoldableButton(
+            width: 300,
+            height: 200,
+            buttonColor: Colors.blue,
+            loadingColor: Colors.red,
+            duration: 4,
+            radius: 16,
+            strokeWidth: 8,
+            onConfirm: () {
+              debugPrint("OnConfirm");
+            },
+            child: const Text(
+              'Hold Me',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ),
     );
