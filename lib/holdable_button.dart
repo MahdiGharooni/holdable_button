@@ -13,6 +13,7 @@ class HoldableButton extends StatefulWidget {
     required this.strokeWidth,
     required this.width,
     required this.height,
+    this.startPoint = 0,
   });
 
   final Color buttonColor;
@@ -22,6 +23,7 @@ class HoldableButton extends StatefulWidget {
   final double height;
   final double radius;
   final double strokeWidth;
+  final double startPoint;
   final Function onConfirm;
   final Widget child;
 
@@ -50,6 +52,7 @@ class _CrossLineContainerState extends State<HoldableButton>
   Widget build(BuildContext context) {
     return GestureDetector(
       onLongPressStart: (details) {
+        _controller.value = 0;
         _controller.forward(from: 0);
       },
       onLongPressEnd: (details) {
@@ -65,6 +68,7 @@ class _CrossLineContainerState extends State<HoldableButton>
               widget.radius,
               widget.loadingColor,
               widget.strokeWidth,
+              widget.startPoint,
             ),
             child: Container(
               width: widget.width,
@@ -72,7 +76,7 @@ class _CrossLineContainerState extends State<HoldableButton>
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: widget.buttonColor,
-                borderRadius: BorderRadius.circular(widget.radius),
+                borderRadius:  BorderRadius.circular(widget.radius),
               ),
               child: widget.child,
             ),

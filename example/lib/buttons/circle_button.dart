@@ -9,11 +9,12 @@ class CircleButton extends StatelessWidget {
     return HoldableButton(
       width: 200,
       height: 200,
-      buttonColor: Colors.blue,
-      loadingColor: Colors.red,
+      buttonColor: Colors.red,
+      loadingColor: Colors.blue,
       duration: 4,
       radius: 100,
       strokeWidth: 20,
+      startPoint: 0.25,
       onConfirm: () {
         debugPrint("OnConfirm");
       },

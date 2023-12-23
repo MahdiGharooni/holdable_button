@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button_example/buttons/circle_button.dart';
+import 'package:holdable_button_example/buttons/oval_button.dart';
+import 'package:holdable_button_example/buttons/square_button.dart';
+
 import 'buttons/rectangle_button.dart';
 
 void main() {
@@ -22,12 +25,18 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Holdable Button'),
         ),
         body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              RectangleButton(),
-              CircleButton(),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Wrap(
+              spacing: 24,
+              runSpacing: 24,
+              children: [
+                const RectangleButton(),
+                const CircleButton(),
+                SquareButton(),
+                const OvalButton(),
+              ],
+            ),
           ),
         ),
       ),

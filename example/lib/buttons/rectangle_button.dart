@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
 
-class RectangleButton extends StatelessWidget {
+class RectangleButton extends StatefulWidget {
   const RectangleButton({super.key});
+
+  @override
+  State<RectangleButton> createState() => _RectangleButtonState();
+}
+
+class _RectangleButtonState extends State<RectangleButton> {
+  String _text = "Hold Me";
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +22,13 @@ class RectangleButton extends StatelessWidget {
       radius: 16,
       strokeWidth: 20,
       onConfirm: () {
-        debugPrint("OnConfirm");
+        setState(() {
+          _text = "CONFIRMED";
+        });
       },
-      child: const Text(
-        'Rectangle',
-        style: TextStyle(
+      child: Text(
+        _text,
+        style: const TextStyle(
           fontSize: 24,
           color: Colors.white,
           fontWeight: FontWeight.bold,
