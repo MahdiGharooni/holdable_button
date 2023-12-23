@@ -52,9 +52,12 @@
 
 ## Demo 🎥
 
-![Holdable Button Demo 1](https://github.com/yourusername/holdable_button/raw/main/demo/demo1.gif)
+![Holdable Button Demo 1](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/rectangle.gif)   ![Holdable Button Demo 2](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/square.gif)
 
-![Holdable Button Demo 2](https://github.com/yourusername/holdable_button/raw/main/demo/demo2.gif)
+
+
+![Holdable Button Demo 3](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/circle.gif)   ![Holdable Button Demo 4](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/oval.gif)
+
 
 
 
