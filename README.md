@@ -1,15 +1,78 @@
-# holdable_button
+# Holdable Button Flutter Plugin
 
-A new Flutter plugin project.
+**Holdable Button** is a Flutter plugin that allows you to create interactive buttons with a unique animation. It enables users to hold a button, displaying a loading animation along its border, and then triggering a callback once the animation completes.
 
-## Getting Started
+## Benefits 🚀
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+- **Interactive Animation**: Engage users with a button that responds to long presses, offering an interactive and visually appealing experience.
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Customizable**: Tailor the button to match your app's design by adjusting parameters such as button color, loading color, border radius, child widget, animation duration, and start position.
+
+- **User Engagement**: Encourage users to interact with your app by introducing a novel way to trigger actions.
+
+## How to Use 🛠️
+
+1. Add the Holdable Button plugin to your `pubspec.yaml` file:
+
+    ```yaml
+    dependencies:
+      holdable_button: any
+    ```
+
+2. Install the plugin by running:
+
+    ```bash
+    flutter pub get
+    ```
+
+3. Import the package in your Dart code:
+
+    ```dart
+    import 'package:holdable_button/holdable_button.dart';
+    ```
+
+4. Implement the HoldableButton widget:
+
+    ```dart
+    HoldableButton(
+      width: 300,
+      height: 200,
+      buttonColor: Colors.blue,
+      loadingColor: Colors.white,
+      radius: 15.0,
+      borderRadiusGeometry: BorderRadius.circular(16),
+      child: Text('Hold Me'),
+      duration: 5,
+      startPoint: 0.25,
+      onConfirm: () {
+        // Callback when animation completes
+      },
+    )
+    ```
+
+## Demo 🎥
+
+![Holdable Button Demo 1](https://github.com/yourusername/holdable_button/raw/main/demo/demo1.gif)
+
+![Holdable Button Demo 2](https://github.com/yourusername/holdable_button/raw/main/demo/demo2.gif)
+
+
+
+## Customization ⚙️
+
+The `HoldableButton` widget supports the following parameters:
+
+- `buttonColor`: The color of the button.
+- `loadingColor`: The color of the loading animation.
+- `radius`: The border radius of the button.
+- `child`: The widget inside the button.
+- `duration`: The duration of the animation in seconds.
+- `startPoint`: start position.
+- `onConfirm`: Callback when the animation completes.
+
+Feel free to experiment with these parameters to achieve the desired look and behavior.
+
+## Contributing 🤝
+
+Contributions are welcome! Please feel free to submit issues or pull requests.
 
