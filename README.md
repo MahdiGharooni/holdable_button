@@ -5,11 +5,11 @@
 
 ## Demo 🎥
 
-![Holdable Button Demo 1](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/rectangle.gif)   ![Holdable Button Demo 2](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/square.gif)
+![Holdable Button Demo 1](https://github.com/MahdiGharooni/holdable_button/blob/master/assets/gifs/rectangle.gif)   ![Holdable Button Demo 2](https://github.com/MahdiGharooni/holdable_button/blob/master/assets/gifs/square.gif)
 
 
 
-![Holdable Button Demo 3](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/circle.gif)   ![Holdable Button Demo 4](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/oval.gif)
+![Holdable Button Demo 3](https://github.com/MahdiGharooni/holdable_button/blob/master/assets/gifs/circle.gif)   ![Holdable Button Demo 4](https://github.com/MahdiGharooni/holdable_button/blob/master/assets/gifs/oval.gif)
 
 
 
