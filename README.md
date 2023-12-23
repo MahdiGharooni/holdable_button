@@ -52,7 +52,6 @@
       buttonColor: Colors.blue,
       loadingColor: Colors.white,
       radius: 15.0,
-      borderRadiusGeometry: BorderRadius.circular(16),
       child: Text('Hold Me'),
       duration: 5,
       startPoint: 0.25,
