@@ -2,6 +2,18 @@
 
 **Holdable Button** is a Flutter plugin that allows you to create interactive buttons with a unique animation. It enables users to hold a button, displaying a loading animation along its border, and then triggering a callback once the animation completes.
 
+
+## Demo 🎥
+
+![Holdable Button Demo 1](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/rectangle.gif)   ![Holdable Button Demo 2](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/square.gif)
+
+
+
+![Holdable Button Demo 3](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/circle.gif)   ![Holdable Button Demo 4](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/oval.gif)
+
+
+
+
 ## Benefits 🚀
 
 - **Interactive Animation**: Engage users with a button that responds to long presses, offering an interactive and visually appealing experience.
@@ -49,16 +61,6 @@
       },
     )
     ```
-
-## Demo 🎥
-
-![Holdable Button Demo 1](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/rectangle.gif)   ![Holdable Button Demo 2](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/square.gif)
-
-
-
-![Holdable Button Demo 3](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/circle.gif)   ![Holdable Button Demo 4](https://github.com/MahdiGharooni/holdable_button/blob/dev/assets/gifs/oval.gif)
-
-
 
 
 ## Customization ⚙️
