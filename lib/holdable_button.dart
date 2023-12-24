@@ -76,7 +76,7 @@ class _CrossLineContainerState extends State<HoldableButton>
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: widget.buttonColor,
-                borderRadius:  BorderRadius.circular(widget.radius),
+                borderRadius: BorderRadius.circular(widget.radius),
               ),
               child: widget.child,
             ),
