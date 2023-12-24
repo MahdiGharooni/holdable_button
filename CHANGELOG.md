@@ -19,3 +19,6 @@
 
 ## 0.0.5
 * bug fix
+
+## 0.0.6
+* bug fix readme
