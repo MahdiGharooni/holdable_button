@@ -16,3 +16,6 @@
 ## 0.0.4
 * clean the radius parameter
 * updated readme file
+
+## 0.0.5
+* bug fix
