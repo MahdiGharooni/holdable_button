@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
 
 class SquareButton extends StatefulWidget {
+  const SquareButton({super.key});
+
   @override
   State<SquareButton> createState() => _SquareButtonState();
 }

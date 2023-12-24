@@ -30,11 +30,11 @@ class _MyAppState extends State<MyApp> {
             child: Wrap(
               spacing: 24,
               runSpacing: 24,
-              children: [
-                const RectangleButton(),
-                const CircleButton(),
+              children: const [
+                RectangleButton(),
+                CircleButton(),
                 SquareButton(),
-                const OvalButton(),
+                OvalButton(),
               ],
             ),
           ),
