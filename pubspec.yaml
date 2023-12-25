@@ -83,3 +83,11 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
+
+topics:
+  - holdable
+  - button
+  - animation
+  - widget
+  - ui
+  - holdable_button
