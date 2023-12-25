@@ -14,6 +14,9 @@ class HoldableButton extends StatefulWidget {
     required this.width,
     required this.height,
     this.startPoint = 0,
+    this.resetAfterFinish = false,
+    this.margin,
+    this.padding,
   });
 
   final Color buttonColor;
@@ -26,6 +29,9 @@ class HoldableButton extends StatefulWidget {
   final double startPoint;
   final Function onConfirm;
   final Widget child;
+  final bool resetAfterFinish;
+  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? padding;
 
   @override
   State<HoldableButton> createState() => _CrossLineContainerState();
@@ -34,6 +40,7 @@ class HoldableButton extends StatefulWidget {
 class _CrossLineContainerState extends State<HoldableButton>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  AnimationStatus? _animationStatus;
 
   @override
   void initState() {
@@ -42,6 +49,7 @@ class _CrossLineContainerState extends State<HoldableButton>
       vsync: this,
       duration: Duration(seconds: widget.duration),
     )..addStatusListener((status) {
+        _animationStatus = status;
         if (status == AnimationStatus.completed) {
           widget.onConfirm.call();
         }
@@ -56,7 +64,12 @@ class _CrossLineContainerState extends State<HoldableButton>
         _controller.forward(from: 0);
       },
       onLongPressEnd: (details) {
-        _controller.reset();
+        if (_animationStatus != AnimationStatus.completed) {
+          _controller.reset();
+        } else if (widget.resetAfterFinish &&
+            _animationStatus == AnimationStatus.completed) {
+          _controller.reset();
+        }
       },
       child: AnimatedBuilder(
         animation: _controller,
@@ -74,6 +87,8 @@ class _CrossLineContainerState extends State<HoldableButton>
               width: widget.width,
               height: widget.height,
               alignment: Alignment.center,
+              margin: widget.margin,
+              padding: widget.padding,
               decoration: BoxDecoration(
                 color: widget.buttonColor,
                 borderRadius: BorderRadius.circular(widget.radius),
