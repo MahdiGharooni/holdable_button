@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:holdable_button/holdable_button.dart';
 import 'package:holdable_button/holdable_button_platform_interface.dart';
-import 'package:holdable_button/holdable_button_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockHoldableButtonPlatform
@@ -13,30 +12,67 @@ class MockHoldableButtonPlatform
 }
 
 void main() {
-  final HoldableButtonPlatform initialPlatform =
-      HoldableButtonPlatform.instance;
+  testWidgets('confirmAfterDuration', (WidgetTester tester) async {
+    bool confirmed = false;
 
-  test('$MethodChannelHoldableButton is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelHoldableButton>());
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: HoldableButton(
+            width: 200,
+            height: 100,
+            buttonColor: Colors.blue,
+            loadingColor: Colors.red,
+            duration: 4,
+            radius: 16,
+            strokeWidth: 8,
+            onConfirm: () {
+              confirmed = true;
+            },
+            child: const Text('Hold Me'),
+          ),
+        ),
+      ),
+    );
+
+    expect(confirmed, false);
+
+    await tester.timedDrag(find.byType(HoldableButton), const Offset(0, 0),
+        const Duration(seconds: 5));
+    await tester.pumpAndSettle();
+
+    expect(confirmed, true);
   });
 
-  test('getPlatformVersion', () async {
-    HoldableButton holdableButtonPlugin = HoldableButton(
-      width: 200,
-      height: 100,
-      buttonColor: Colors.blue,
-      loadingColor: Colors.red,
-      duration: 4,
-      radius: 16,
-      strokeWidth: 8,
-      onConfirm: () {
-        debugPrint("OnConfirm");
-      },
-      child: const Text('Hold Me'),
-    );
-    MockHoldableButtonPlatform fakePlatform = MockHoldableButtonPlatform();
-    HoldableButtonPlatform.instance = fakePlatform;
+  testWidgets('notConfirmBeforeDuration', (WidgetTester tester) async {
+    bool confirmed = false;
 
-    // expect(await holdableButtonPlugin.getPlatformVersion(), '42');
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: HoldableButton(
+            width: 200,
+            height: 100,
+            buttonColor: Colors.blue,
+            loadingColor: Colors.red,
+            duration: 4,
+            radius: 16,
+            strokeWidth: 8,
+            onConfirm: () {
+              confirmed = true;
+            },
+            child: const Text('Hold Me'),
+          ),
+        ),
+      ),
+    );
+
+    expect(confirmed, false);
+
+    await tester.timedDrag(find.byType(HoldableButton), const Offset(0, 0),
+        const Duration(seconds: 3));
+    await tester.pumpAndSettle();
+
+    expect(confirmed, false);
   });
 }
