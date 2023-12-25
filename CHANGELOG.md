@@ -26,3 +26,6 @@
 ## 0.0.7
 * added margin and padding parameter
 * added test case
+
+## 0.0.8
+* bug fix
