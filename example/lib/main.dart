@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Holdable Button'),
+          title: const Text('Holdable Button Plugin'),
         ),
         body: Center(
           child: Padding(
