@@ -29,6 +29,7 @@ class _SquareButtonState extends State<SquareButton> {
       radius: 1,
       strokeWidth: 20,
       startPoint: 0.5,
+      padding: const EdgeInsets.all(2),
       onConfirm: () {
         setState(() {
           child = const Center(
