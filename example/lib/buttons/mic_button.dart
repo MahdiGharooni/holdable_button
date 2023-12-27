@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
 
-class FingerButton extends StatefulWidget {
-  const FingerButton({super.key});
+class MicButton extends StatefulWidget {
+  const MicButton({super.key});
 
   @override
-  State<FingerButton> createState() => _FingerButtonState();
+  State<MicButton> createState() => _MicButtonState();
 }
 
-class _FingerButtonState extends State<FingerButton> {
-  IconData _iconData = Icons.fingerprint;
+class _MicButtonState extends State<MicButton> {
+  IconData _iconData = Icons.mic;
 
   Color _bgColor = Colors.blueGrey[900]!;
 

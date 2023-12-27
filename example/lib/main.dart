@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button_example/buttons/circle_button.dart';
-import 'package:holdable_button_example/buttons/finger_button.dart';
 import 'package:holdable_button_example/buttons/long_button.dart';
+import 'package:holdable_button_example/buttons/mic_button.dart';
 import 'package:holdable_button_example/buttons/oval_button.dart';
 import 'package:holdable_button_example/buttons/square_button.dart';
 
@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                 CircleButton(),
                 SquareButton(),
                 OvalButton(),
-                FingerButton(),
+                MicButton(),
                 LongButton(),
               ],
             ),
