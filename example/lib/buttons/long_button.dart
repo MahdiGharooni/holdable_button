@@ -10,7 +10,7 @@ class LongButton extends StatefulWidget {
 
 class _LongButtonState extends State<LongButton> {
   Color _bgColor = Colors.blueGrey[400]!;
-  String _text = "With Margin";
+  String _text = "Hold Me";
 
   @override
   Widget build(BuildContext context) {

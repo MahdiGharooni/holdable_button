@@ -7,8 +7,13 @@ class MyPainter extends CustomPainter {
   final double startPoint;
   final Color loadingColor;
 
-  MyPainter(this.progress, this.radius, this.loadingColor, this.strokeWidth,
-      [this.startPoint = 0]);
+  MyPainter(
+    this.progress,
+    this.radius,
+    this.loadingColor,
+    this.strokeWidth, [
+    this.startPoint = 0,
+  ]);
 
   @override
   void paint(Canvas canvas, Size size) {
