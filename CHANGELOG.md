@@ -29,3 +29,7 @@
 
 ## 0.0.8
 * bug fix
+
+## 0.0.9
+* bug fix
+* imp gifs
