@@ -5,7 +5,7 @@
 
 ## Demo 🎥
 
-<img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/long.gif" alt="long">  <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/icon.gif" alt="icon"> 
+<img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/long.gif" alt="long">  <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/voice.gif" alt="voice"> 
 
 
 <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/circle.gif" alt="circle"> <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/oval.gif" alt="oval">
