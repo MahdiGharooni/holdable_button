@@ -9,21 +9,26 @@ class RectangleButton extends StatefulWidget {
 }
 
 class _RectangleButtonState extends State<RectangleButton> {
-  String _text = "Hold Me";
+  String _text = "Hold Me 4 Seconds";
+
+  Color  buttonColor = Colors.blue;
 
   @override
   Widget build(BuildContext context) {
     return HoldableButton(
       width: 300,
       height: 200,
-      buttonColor: Colors.blue,
+      buttonColor:buttonColor,
       loadingColor: Colors.red,
       duration: 4,
+      margin: EdgeInsets.all(8),
+      padding: EdgeInsets.all(8),
       radius: 16,
-      strokeWidth: 20,
+      strokeWidth: 8,
       onConfirm: () {
         setState(() {
           _text = "CONFIRMED";
+          buttonColor = Colors.green;
         });
       },
       child: Text(
