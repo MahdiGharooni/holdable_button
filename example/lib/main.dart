@@ -28,18 +28,21 @@ class _MyAppState extends State<MyApp> {
         ),
         body: const Center(
           child: Padding(
-            padding: EdgeInsets.all(24.0),
-            child: Wrap(
-              spacing: 32,
-              runSpacing: 32,
-              children: [
-                RectangleButton(),
-                CircleButton(),
-                SquareButton(),
-                OvalButton(),
-                MicButton(),
-                LongButton(),
-              ],
+            padding: EdgeInsets.all(12.0),
+            child: SingleChildScrollView(
+              padding: EdgeInsets.all(12.0),
+              child: Wrap(
+                spacing: 32,
+                runSpacing: 32,
+                children: [
+                  RectangleButton(),
+                  CircleButton(),
+                  SquareButton(),
+                  OvalButton(),
+                  MicButton(),
+                  LongButton(),
+                ],
+              ),
             ),
           ),
         ),
