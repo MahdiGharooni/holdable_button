@@ -26,13 +26,13 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Holdable Button Plugin'),
         ),
-        body: Center(
+        body: const Center(
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0),
             child: Wrap(
               spacing: 32,
               runSpacing: 32,
-              children: const [
+              children: [
                 RectangleButton(),
                 CircleButton(),
                 SquareButton(),
