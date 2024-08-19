@@ -15,13 +15,14 @@ class OvalButton extends StatelessWidget {
       radius: 100,
       strokeWidth: 20,
       startPoint: 0,
+      hasVibrate: true,
       onConfirm: () {
         debugPrint("OnConfirm");
       },
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: const [
+        children: [
           Icon(Icons.add, size: 32),
           SizedBox(width: 12),
           Text(

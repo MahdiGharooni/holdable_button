@@ -15,6 +15,7 @@ class CircleButton extends StatelessWidget {
       radius: 100,
       strokeWidth: 20,
       startPoint: 0.25,
+      hasVibrate: true,
       onConfirm: () {
         debugPrint("OnConfirm");
       },

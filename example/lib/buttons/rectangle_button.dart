@@ -21,8 +21,9 @@ class _RectangleButtonState extends State<RectangleButton> {
       buttonColor:buttonColor,
       loadingColor: Colors.red,
       duration: 4,
-      margin: EdgeInsets.all(8),
-      padding: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
+      hasVibrate: true,
       radius: 16,
       strokeWidth: 8,
       onConfirm: () {

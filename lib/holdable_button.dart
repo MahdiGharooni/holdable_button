@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:holdable_button/my_painter.dart';
 
 class HoldableButton extends StatefulWidget {
@@ -15,6 +16,7 @@ class HoldableButton extends StatefulWidget {
     required this.height,
     this.startPoint = 0,
     this.resetAfterFinish = false,
+    this.hasVibrate = false,
     this.margin,
     this.padding,
   });
@@ -30,6 +32,7 @@ class HoldableButton extends StatefulWidget {
   final Function onConfirm;
   final Widget child;
   final bool resetAfterFinish;
+  final bool hasVibrate;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
 
@@ -51,6 +54,7 @@ class _CrossLineContainerState extends State<HoldableButton>
     )..addStatusListener((status) {
         _animationStatus = status;
         if (status == AnimationStatus.completed) {
+          _vibrate();
           widget.onConfirm.call();
         }
       });
@@ -99,6 +103,13 @@ class _CrossLineContainerState extends State<HoldableButton>
         },
       ),
     );
+  }
+
+  Future<void> _vibrate() async {
+    if (widget.hasVibrate) {
+      await SystemChannels.platform
+          .invokeMethod<void>('HapticFeedback.vibrate');
+    }
   }
 
   @override
