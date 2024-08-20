@@ -33,3 +33,11 @@
 ## 0.0.9
 * bug fix
 * imp gifs
+
+## 0.0.10
+* support WASM
+* bug fix
+
+## 0.0.11
+* added vibration option
+* bug fix
