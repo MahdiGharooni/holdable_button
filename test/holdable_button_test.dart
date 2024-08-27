@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:holdable_button/holdable_button.dart';
 import 'package:holdable_button/holdable_button_platform_interface.dart';
+import 'package:holdable_button/utils/utils.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockHoldableButtonPlatform
@@ -19,6 +20,7 @@ void main() {
       MaterialApp(
         home: Scaffold(
           body: HoldableButton(
+            loadingType: LoadingType.edgeLoading,
             width: 200,
             height: 100,
             buttonColor: Colors.blue,
@@ -51,6 +53,7 @@ void main() {
       MaterialApp(
         home: Scaffold(
           body: HoldableButton(
+            loadingType: LoadingType.edgeLoading,
             width: 200,
             height: 100,
             buttonColor: Colors.blue,
