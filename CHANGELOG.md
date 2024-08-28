@@ -41,3 +41,8 @@
 ## 0.0.11
 * added vibration option
 * bug fix
+
+## 0.0.12
+* added filling_loading_animation type
+* updated samples based on loadingType
+* bug fix

@@ -1,6 +1,6 @@
 name: holdable_button
 description: A Flutter plugin that enables users to create buttons with a hold gesture, triggering a loading animation around the button while held.
-version: 0.0.11
+version: 0.0.12
 
 repository: 'https://github.com/MahdiGharooni/holdable_button'
 
