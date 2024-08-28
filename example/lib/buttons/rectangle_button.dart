@@ -27,6 +27,7 @@ class _RectangleButtonState extends State<RectangleButton> {
       padding: const EdgeInsets.all(8),
       hasVibrate: true,
       resetAfterFinish: true,
+      reverseAfterLongPressUp: true,
       radius: 16,
       strokeWidth: 8,
       onConfirm: () {

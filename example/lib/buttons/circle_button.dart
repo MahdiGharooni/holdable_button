@@ -19,6 +19,8 @@ class CircleButton extends StatelessWidget {
       edgeLoadingStartPoint: 0.25,
       hasVibrate: true,
       reverseAfterLongPressUp: false,
+      beginFillingPoint: Alignment.bottomCenter,
+      endFillingPoint: Alignment.topCenter,
       onConfirm: () {
         debugPrint("OnConfirm");
       },
