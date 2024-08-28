@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
+import 'package:holdable_button/utils/utils.dart';
 
 class OvalButton extends StatelessWidget {
   const OvalButton({super.key});
@@ -7,6 +8,7 @@ class OvalButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HoldableButton(
+      loadingType: LoadingType.edgeLoading,
       width: 200,
       height: 100,
       buttonColor: Colors.orange,
@@ -14,7 +16,7 @@ class OvalButton extends StatelessWidget {
       duration: 3,
       radius: 100,
       strokeWidth: 20,
-      startPoint: 0,
+      edgeLoadingStartPoint: 0,
       hasVibrate: true,
       onConfirm: () {
         debugPrint("OnConfirm");

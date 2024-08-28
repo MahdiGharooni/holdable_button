@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
+import 'package:holdable_button/utils/utils.dart';
 
 class SquareButton extends StatefulWidget {
   const SquareButton({super.key});
@@ -21,6 +22,7 @@ class _SquareButtonState extends State<SquareButton> {
   @override
   Widget build(BuildContext context) {
     return HoldableButton(
+      loadingType: LoadingType.edgeLoading,
       width: 200,
       height: 200,
       buttonColor: Colors.green,
@@ -28,7 +30,7 @@ class _SquareButtonState extends State<SquareButton> {
       duration: 3,
       radius: 1,
       strokeWidth: 20,
-      startPoint: 0.5,
+      edgeLoadingStartPoint: 0.5,
       padding: const EdgeInsets.all(2),
       onConfirm: () {
         setState(() {

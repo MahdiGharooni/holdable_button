@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
+import 'package:holdable_button/utils/utils.dart';
 
 class RectangleButton extends StatefulWidget {
   const RectangleButton({super.key});
@@ -16,6 +17,7 @@ class _RectangleButtonState extends State<RectangleButton> {
   @override
   Widget build(BuildContext context) {
     return HoldableButton(
+      loadingType: LoadingType.fillingLoading,
       width: 300,
       height: 200,
       buttonColor:buttonColor,
@@ -24,6 +26,7 @@ class _RectangleButtonState extends State<RectangleButton> {
       margin: const EdgeInsets.all(8),
       padding: const EdgeInsets.all(8),
       hasVibrate: true,
+      resetAfterFinish: true,
       radius: 16,
       strokeWidth: 8,
       onConfirm: () {
