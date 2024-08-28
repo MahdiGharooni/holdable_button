@@ -27,6 +27,7 @@ class HoldableButton extends StatefulWidget {
     this.padding,
   });
 
+  /// The loading type from enum { edgeLoading, fillingLoading }
   final LoadingType loadingType;
   final Color buttonColor;
   final Color loadingColor;
@@ -35,15 +36,34 @@ class HoldableButton extends StatefulWidget {
   final double height;
   final double radius;
   final double strokeWidth;
-  final double edgeLoadingStartPoint;
   final Function onConfirm;
   final Widget child;
-  final bool resetAfterFinish;
-  final bool reverseAfterLongPressUp;
   final bool hasVibrate;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
+
+  /// after longPressUp, if this value is true, it will reverse the loading in the path that it is passed
+  /// if this value is false, the loading will stop suddenly
+  /// the default value is true
+  final bool reverseAfterLongPressUp;
+
+  /// after loading complete, if this value is true, it will reset the loading and enable it again
+  /// the false value, keep the loading completed, and not allow to start again
+  /// the default value is false
+  final bool resetAfterFinish;
+
+  /// The start point of loading in edgeLoading type
+  /// the default value is 0
+  final double edgeLoadingStartPoint;
+
+  /// Side of start loading in FillingLoading type
+  /// It can be Alignment.centerRight, Alignment.centerLeft, Alignment.topCenter or etc.
+  /// The default value is Alignment.centerRight.
   final AlignmentGeometry beginFillingPoint;
+
+  /// Side of end loading in FillingLoading type
+  /// It can be Alignment.centerRight, Alignment.centerLeft, Alignment.topCenter or etc.
+  /// The default value is Alignment.centerLeft.
   final AlignmentGeometry endFillingPoint;
 
   @override
