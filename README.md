@@ -47,6 +47,7 @@
 
     ```dart
     HoldableButton(
+      loadingType: LoadingType.edgeLoading,
       width: 300,
       height: 200,
       buttonColor: Colors.blue,
@@ -55,6 +56,7 @@
       child: Text('Hold Me'),
       duration: 5,
       startPoint: 0.25,
+      hasVibrate: true,
       onConfirm: () {
         // Callback when animation completes
       },
@@ -66,12 +68,14 @@
 
 The `HoldableButton` widget supports the following parameters:
 
+- `loadingType`: the loading type: **edgeLoading** or **fillingLoading**.
 - `buttonColor`: The color of the button.
 - `loadingColor`: The color of the loading animation.
 - `radius`: The border radius of the button.
 - `child`: The widget inside the button.
 - `duration`: The duration of the animation in seconds.
-- `startPoint`: start position.
+- `startPoint`: Start position in edgeLoading type.
+- `hasVibrate`: Enable Vibration after loading complete.
 - `onConfirm`: Callback when the animation completes.
 
 Feel free to experiment with these parameters to achieve the desired look and behavior.
