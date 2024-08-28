@@ -5,12 +5,18 @@
 
 ## Demo 🎥
 
-<img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/long.gif" alt="long">  <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/voice.gif" alt="voice" width="150"> 
+**edge loading type:**
 
-
-<img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/circle.gif" alt="circle"> <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/oval.gif" alt="oval">
+<img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/voice.gif" alt="voice" width="150"> <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/oval.gif" alt="oval">
 
 <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/rectangle.gif" alt="rectangle"> <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/square.gif" alt="square">
+
+
+**filling loading type:**
+
+<img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/long.gif" alt="long"> <img src="https://raw.githubusercontent.com/MahdiGharooni/holdable_button/master/assets/gifs/circle.gif" alt="circle"> 
+
+
 
 
 
