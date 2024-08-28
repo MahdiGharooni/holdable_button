@@ -99,10 +99,8 @@ class _CrossLineContainerState extends State<HoldableButton>
   Widget build(BuildContext context) {
     return GestureDetector(
         onLongPressStart: (details) {
-          if (_animationStatus == null) {
-            _controller.value = 0;
-            _controller.forward(from: 0);
-          }
+          _controller.value = 0;
+          _controller.forward(from: 0);
         },
         onLongPressEnd: (details) {
           if (_animationStatus != AnimationStatus.completed) {
