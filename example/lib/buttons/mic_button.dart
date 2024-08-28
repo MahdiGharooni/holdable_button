@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
+import 'package:holdable_button/utils/utils.dart';
 
 class MicButton extends StatefulWidget {
   const MicButton({super.key});
@@ -16,6 +17,7 @@ class _MicButtonState extends State<MicButton> {
   @override
   Widget build(BuildContext context) {
     return HoldableButton(
+      loadingType: LoadingType.edgeLoading,
       width: 50,
       height: 50,
       buttonColor: _bgColor,
@@ -24,7 +26,7 @@ class _MicButtonState extends State<MicButton> {
       radius: 100,
       strokeWidth: 4,
       margin: const EdgeInsets.all(4),
-      startPoint: 0.25,
+      edgeLoadingStartPoint: 0.25,
       resetAfterFinish: true,
       onConfirm: () {
         setState(() {

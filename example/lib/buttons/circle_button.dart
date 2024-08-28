@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:holdable_button/holdable_button.dart';
+import 'package:holdable_button/utils/utils.dart';
 
 class CircleButton extends StatelessWidget {
   const CircleButton({super.key});
@@ -7,6 +8,7 @@ class CircleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HoldableButton(
+      loadingType: LoadingType.fillingLoading,
       width: 200,
       height: 200,
       buttonColor: Colors.red,
@@ -14,8 +16,9 @@ class CircleButton extends StatelessWidget {
       duration: 4,
       radius: 100,
       strokeWidth: 20,
-      startPoint: 0.25,
+      edgeLoadingStartPoint: 0.25,
       hasVibrate: true,
+      reverseAfterLongPressUp: false,
       onConfirm: () {
         debugPrint("OnConfirm");
       },
